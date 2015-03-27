@@ -23,7 +23,6 @@ using Windows.Storage;
 using System.Diagnostics;
 using Microsoft.Phone.Tasks;
 using WP.TiTanCam.Model;
-using WP.TiTanCam.ViewModel;
 
 namespace WP.TiTanCam
 {
@@ -33,19 +32,18 @@ namespace WP.TiTanCam
         MediaLibrary library = new MediaLibrary();
         private PhotoChooserTask photoTask = new PhotoChooserTask();
         private int saveCounter = 0;
-
+        
 
         // Constructor
         public MainPage()
         {
             InitializeComponent();
-            this.Loaded += MainPage_Loaded;
         }
 
-        protected async void MainPage_Loaded(object sender, RoutedEventArgs e)
+        protected async override void OnNavigatedTo(NavigationEventArgs e)
         {
-            //MessageBox.Show(ResolutionHelper.CurrentResolution.ToString());
-            CheckResolution();
+            base.OnNavigatedTo(e);
+
             //Check available back cam & front cam
             if (PhotoCaptureDevice.AvailableSensorLocations.Contains(CameraSensorLocation.Back) || PhotoCaptureDevice.AvailableSensorLocations.Contains(CameraSensorLocation.Back))
             {
@@ -62,27 +60,10 @@ namespace WP.TiTanCam
                     captureDevice = await PhotoCaptureDevice.OpenAsync(CameraSensorLocation.Front, res);
                 }
 
-                captureDevice.SetProperty(KnownCameraGeneralProperties.EncodeWithOrientation, captureDevice.SensorLocation == CameraSensorLocation.Back
-                    ? captureDevice.SensorRotationInDegrees : -captureDevice.SensorRotationInDegrees);
+                captureDevice.SetProperty(KnownCameraGeneralProperties.EncodeWithOrientation,captureDevice.SensorLocation == CameraSensorLocation.Back
+                    ? captureDevice.SensorRotationInDegrees :- captureDevice.SensorRotationInDegrees );
                 ViewFinderPanel.SetSource(captureDevice); //set source VideoBrush
                 ViewFinderPanel.RelativeTransform = new CompositeTransform() { CenterX = 0.5, CenterY = 0.5, Rotation = 90 }; //set transform portrait 
-
-            }
-        }
-
-        private void CheckResolution()
-        {
-            var screen = ResolutionHelper.CurrentResolution;
-            switch (screen)
-            {
-                case Resolution.HD:
-                    LayoutRoot.Width = 480;
-                    LayoutRoot.Height = 853;
-                    break;
-                case Resolution.WVGA:
-                    LayoutRoot.Width = 480;
-                    LayoutRoot.Height = 800;
-                    break;
 
             }
         }
@@ -110,38 +91,33 @@ namespace WP.TiTanCam
         }
         private void SetLayoutLandscapeL()
         {
-            ViewFinderCanvas.Width = 853;
+            ViewFinderCanvas.Width = 640;
             ViewFinderCanvas.Height = 480;
 
-            //LayoutRoot.RowDefinitions.Clear();
-            //LayoutRoot.ColumnDefinitions.Clear();
-            //ColumnDefinition column1 = new ColumnDefinition();
-            //ColumnDefinition column2 = new ColumnDefinition();
-            //LayoutRoot.ColumnDefinitions.Add(column1);
-            //LayoutRoot.ColumnDefinitions.Add(column2);
+            Grid.SetRow(ViewFinderCanvas, 0);
+            Grid.SetColumn(ViewFinderCanvas, 0);
+            Grid.SetRow(ListButtonGrid, 0);
+            Grid.SetColumn(ListButtonGrid, 1);
 
-            //Grid.SetRow(ViewFinderCanvas, 0);
-            //Grid.SetColumn(ViewFinderCanvas, 0);
-            //Grid.SetRow(ListButtonGrid, 0);
-            //Grid.SetColumn(ListButtonGrid, 0);
+            Grid.SetRow(CameraRollButton, 0);
+            Grid.SetColumn(CameraRollButton, 0);
 
-            //Grid.SetRow(CameraRollButton, 0);
-            //Grid.SetColumn(CameraRollButton, 0);
+            Grid.SetRow(CaptureButton, 1);
+            Grid.SetColumn(CaptureButton, 0);
 
-            //Grid.SetRow(CaptureButton, 1);
-            //Grid.SetColumn(CaptureButton, 0);
-
-            //Grid.SetRow(FilterButton, 2);
-            //Grid.SetColumn(FilterButton, 0);
+            Grid.SetRow(FilterButton, 2);
+            Grid.SetColumn(FilterButton, 0);
 
             ViewFinderPanel.RelativeTransform = new CompositeTransform() { CenterX = 0.5, CenterY = 0.5, Rotation = 0 };
         }
         private void SetLayoutPortrait()
         {
             ViewFinderCanvas.Width = 480;
-            ViewFinderCanvas.Height = 853;
+            ViewFinderCanvas.Height = 640;
 
-            Grid.SetRow(ListButtonGrid, 0);
+            Grid.SetRow(ViewFinderCanvas, 0);
+            Grid.SetColumn(ViewFinderCanvas, 0);
+            Grid.SetRow(ListButtonGrid, 1);
             Grid.SetColumn(ListButtonGrid, 0);
 
             Grid.SetRow(CameraRollButton, 0);
@@ -161,9 +137,9 @@ namespace WP.TiTanCam
 
             if (e.Orientation == PageOrientation.LandscapeRight) //status bar on the right
             {
-
-                //SetLayoutLandscapeR();
-                SetOrientation(PageOrientation.LandscapeRight, ViewFinderCanvas);
+               
+                SetLayoutLandscapeR();
+                SetOrientation(PageOrientation.LandscapeRight,ViewFinderCanvas);
             }
             else if (e.Orientation == PageOrientation.LandscapeLeft) //status bar on the left
             {
@@ -176,8 +152,8 @@ namespace WP.TiTanCam
                 SetLayoutPortrait();
                 SetOrientation(PageOrientation.PortraitUp, ViewFinderCanvas);
             }
-
-
+            
+            
         }
 
         public void SetOrientation(PageOrientation pageOrientation, Canvas viewFinderCanvas)
@@ -303,7 +279,7 @@ namespace WP.TiTanCam
                 CameraCaptureSequence sequence = captureDevice.CreateCaptureSequence(1);
                 captureDevice.SetProperty(KnownCameraGeneralProperties.AutoFocusRange, AutoFocusRange.Infinity);
                 captureDevice.SetProperty(KnownCameraGeneralProperties.PlayShutterSoundOnCapture, true);
-                captureDevice.SetProperty(KnownCameraPhotoProperties.FlashMode, FlashState.Auto);
+                //captureDevice.SetProperty(KnownCameraPhotoProperties.FlashMode, FlashState.On);
 
                 MemoryStream captureStream1 = new MemoryStream();
                 sequence.Frames[0].CaptureStream = captureStream1.AsOutputStream();
@@ -316,7 +292,7 @@ namespace WP.TiTanCam
                 MediaLibrary library = new MediaLibrary();
                 string filename = "IMG_" + saveCounter;
                 Picture pic1 = library.SavePictureToCameraRoll(filename, captureStream1); //Save picture in cameraroll
-
+                
                 //Update Background Cameraroll Button
                 BitmapImage bitImage = new BitmapImage();
                 bitImage.SetSource(pic1.GetThumbnail());
@@ -333,10 +309,10 @@ namespace WP.TiTanCam
             }
         }
 
-        private void ViewFinderCanvas_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        private  void ViewFinderCanvas_Tap(object sender, System.Windows.Input.GestureEventArgs e)
         {
             Point uiTapPoint = e.GetPosition(ViewFinderCanvas);
-            Windows.Foundation.Point tapPoint = new Windows.Foundation.Point(uiTapPoint.X, uiTapPoint.Y);
+            Windows.Foundation.Point tapPoint = new Windows.Foundation.Point(uiTapPoint.X, uiTapPoint.Y); 
 
         }
 

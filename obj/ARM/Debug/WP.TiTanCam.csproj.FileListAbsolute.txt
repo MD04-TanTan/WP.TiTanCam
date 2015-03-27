@@ -73,11 +73,3 @@ D:\VTCA\MD04\Windows Phone\Lab\Windows Phone App\WP.TiTanCam\Bin\ARM\Debug\zh-CN
 D:\VTCA\MD04\Windows Phone\Lab\Windows Phone App\WP.TiTanCam\Bin\ARM\Debug\zh-TW\Microsoft.Phone.Controls.Toolkit.resources.dll
 D:\VTCA\MD04\Windows Phone\Lab\Windows Phone App\WP.TiTanCam\obj\ARM\Debug\Views\CameraRoll.g.cs
 D:\VTCA\MD04\Windows Phone\Lab\Windows Phone App\WP.TiTanCam\obj\ARM\Debug\Views\CameraRollItem.g.cs
-D:\VTCA\MD04\Windows Phone\Lab\Windows Phone App\WP.TiTanCam\Bin\ARM\Debug\Assets\ApplicationIcon.png
-D:\VTCA\MD04\Windows Phone\Lab\Windows Phone App\WP.TiTanCam\Bin\ARM\Debug\Assets\Tiles\FlipCycleTileLarge.png
-D:\VTCA\MD04\Windows Phone\Lab\Windows Phone App\WP.TiTanCam\Bin\ARM\Debug\Assets\Tiles\FlipCycleTileMedium.png
-D:\VTCA\MD04\Windows Phone\Lab\Windows Phone App\WP.TiTanCam\Bin\ARM\Debug\Assets\Tiles\FlipCycleTileSmall.png
-D:\VTCA\MD04\Windows Phone\Lab\Windows Phone App\WP.TiTanCam\Bin\ARM\Debug\Assets\Tiles\IconicTileMediumLarge.png
-D:\VTCA\MD04\Windows Phone\Lab\Windows Phone App\WP.TiTanCam\Bin\ARM\Debug\Assets\Tiles\IconicTileSmall.png
-D:\VTCA\MD04\Windows Phone\Lab\Windows Phone App\WP.TiTanCam\Bin\ARM\Debug\CustomControl.dll
-D:\VTCA\MD04\Windows Phone\Lab\Windows Phone App\WP.TiTanCam\Bin\ARM\Debug\CustomControl.pdb
