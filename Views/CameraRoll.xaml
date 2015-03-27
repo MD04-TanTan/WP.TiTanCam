@@ -1,5 +1,4 @@
 ﻿<phone:PhoneApplicationPage
-    x:Class="WP.TiTanCam.Views.CameraRoll"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
@@ -7,6 +6,8 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:Control="clr-namespace:CustomControl.Control;assembly=CustomControl"
+    x:Class="WP.TiTanCam.Views.CameraRoll"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
@@ -25,10 +26,8 @@
         <ListBox x:Name="ListThumbnail" ItemsSource="{Binding listImage}" Grid.Row="1" Margin="12,0,12,0" >
             <ListBox.ItemsPanel>
                 <ItemsPanelTemplate>
-                    
-                    <toolkit:WrapPanel Orientation="Horizontal" ItemHeight="150" ItemWidth="150">
-                        
-                    </toolkit:WrapPanel>
+
+                    <toolkit:WrapPanel Orientation="Horizontal" ItemHeight="150" ItemWidth="150"/>
                 </ItemsPanelTemplate>
             </ListBox.ItemsPanel>
 

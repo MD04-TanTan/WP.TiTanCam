@@ -1,5 +1,5 @@
-﻿<xapCache source="D:\VTCA\MD04\Windows Phone\Lab\Windows Phone App\WP.TiTanCam\Bin\ARM\Debug\WP.TiTanCam_Debug_ARM.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="24-Mar-15 6:54:04 PM">
-  <file source="D:\VTCA\MD04\Windows Phone\Lab\Windows Phone App\WP.TiTanCam\obj\ARM\Debug\WP.TiTanCam.dll" archivePath="WP.TiTanCam.dll" lastWriteTime="24-Mar-15 6:54:01 PM" />
+﻿<xapCache source="D:\VTCA\MD04\Windows Phone\Lab\Windows Phone App\WP.TiTanCam\Bin\ARM\Debug\WP.TiTanCam_Debug_ARM.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="27-Mar-15 12:36:43 AM">
+  <file source="D:\VTCA\MD04\Windows Phone\Lab\Windows Phone App\WP.TiTanCam\obj\ARM\Debug\WP.TiTanCam.dll" archivePath="WP.TiTanCam.dll" lastWriteTime="27-Mar-15 12:36:40 AM" />
   <file source="D:\VTCA\MD04\Windows Phone\Lab\Windows Phone App\WP.TiTanCam\Assets\AlignmentGrid.png" archivePath="Assets\AlignmentGrid.png" lastWriteTime="20-Jan-15 11:52:43 PM" />
   <file source="D:\VTCA\MD04\Windows Phone\Lab\Windows Phone App\WP.TiTanCam\Assets\Icons\capture.png" archivePath="Assets\Icons\capture.png" lastWriteTime="23-Jan-15 9:50:16 PM" />
   <file source="D:\VTCA\MD04\Windows Phone\Lab\Windows Phone App\WP.TiTanCam\Assets\Icons\filter.png" archivePath="Assets\Icons\filter.png" lastWriteTime="23-Jan-15 9:14:20 PM" />
@@ -11,7 +11,14 @@
   <file source="D:\VTCA\MD04\Windows Phone\Lab\Windows Phone App\WP.TiTanCam\Assets\Tiles\FlipCycleTileSmall.png" archivePath="Assets\Tiles\FlipCycleTileSmall.png" lastWriteTime="20-Jan-15 11:52:43 PM" />
   <file source="D:\VTCA\MD04\Windows Phone\Lab\Windows Phone App\WP.TiTanCam\Assets\Tiles\IconicTileMediumLarge.png" archivePath="Assets\Tiles\IconicTileMediumLarge.png" lastWriteTime="20-Jan-15 11:52:43 PM" />
   <file source="D:\VTCA\MD04\Windows Phone\Lab\Windows Phone App\WP.TiTanCam\Assets\Tiles\IconicTileSmall.png" archivePath="Assets\Tiles\IconicTileSmall.png" lastWriteTime="20-Jan-15 11:52:43 PM" />
-  <file source="D:\VTCA\MD04\Windows Phone\Lab\Windows Phone App\WP.TiTanCam\Bin\ARM\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="23-Jan-15 7:37:31 PM" />
+  <file source="D:\VTCA\MD04\Windows Phone\Lab\Windows Phone App\WP.TiTanCam\Bin\ARM\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="26-Mar-15 7:20:24 PM" />
+  <file source="D:\VTCA\MD04\Windows Phone\Lab\Windows Phone App\WP.TiTanCam\Bin\ARM\Debug\Assets\ApplicationIcon.png" archivePath="Assets\ApplicationIcon.png" lastWriteTime="20-Dec-14 8:27:14 PM" />
+  <file source="D:\VTCA\MD04\Windows Phone\Lab\Windows Phone App\WP.TiTanCam\Bin\ARM\Debug\Assets\Tiles\FlipCycleTileLarge.png" archivePath="Assets\Tiles\FlipCycleTileLarge.png" lastWriteTime="20-Dec-14 8:27:14 PM" />
+  <file source="D:\VTCA\MD04\Windows Phone\Lab\Windows Phone App\WP.TiTanCam\Bin\ARM\Debug\Assets\Tiles\FlipCycleTileMedium.png" archivePath="Assets\Tiles\FlipCycleTileMedium.png" lastWriteTime="20-Dec-14 8:27:14 PM" />
+  <file source="D:\VTCA\MD04\Windows Phone\Lab\Windows Phone App\WP.TiTanCam\Bin\ARM\Debug\Assets\Tiles\FlipCycleTileSmall.png" archivePath="Assets\Tiles\FlipCycleTileSmall.png" lastWriteTime="20-Dec-14 8:27:14 PM" />
+  <file source="D:\VTCA\MD04\Windows Phone\Lab\Windows Phone App\WP.TiTanCam\Bin\ARM\Debug\Assets\Tiles\IconicTileMediumLarge.png" archivePath="Assets\Tiles\IconicTileMediumLarge.png" lastWriteTime="20-Dec-14 8:27:14 PM" />
+  <file source="D:\VTCA\MD04\Windows Phone\Lab\Windows Phone App\WP.TiTanCam\Bin\ARM\Debug\Assets\Tiles\IconicTileSmall.png" archivePath="Assets\Tiles\IconicTileSmall.png" lastWriteTime="20-Dec-14 8:27:14 PM" />
+  <file source="D:\VTCA\MD04\Windows Phone\Lab\Windows Phone App\CustomControl\Bin\ARM\Debug\CustomControl.dll" archivePath="CustomControl.dll" lastWriteTime="26-Mar-15 10:21:42 AM" />
   <file source="D:\VTCA\MD04\Windows Phone\Lab\Windows Phone App\packages\LumiaImagingSDK.2.0.184\lib\wp8\Lumia.Imaging.Managed.dll" archivePath="Lumia.Imaging.Managed.dll" lastWriteTime="21-Jan-15 12:37:30 AM" />
   <file source="D:\VTCA\MD04\Windows Phone\Lab\Windows Phone App\packages\LumiaImagingSDK.2.0.184\lib\wp8\ARM\Lumia.Imaging.winmd" archivePath="Lumia.Imaging.winmd" lastWriteTime="21-Jan-15 12:37:29 AM" />
   <file source="D:\VTCA\MD04\Windows Phone\Lab\Windows Phone App\packages\LumiaImagingSDK.2.0.184\lib\wp8\ARM\Lumia.InteropServices.WindowsRuntime.winmd" archivePath="Lumia.InteropServices.WindowsRuntime.winmd" lastWriteTime="21-Jan-15 12:37:30 AM" />
@@ -23,5 +30,7 @@
   <file source="D:\VTCA\MD04\Windows Phone\Lab\Windows Phone App\packages\LumiaImagingSDK.2.0.184\lib\wp8\ARM\Lumia.InteropServices.WindowsRuntime.xml" archivePath="Lumia.InteropServices.WindowsRuntime.xml" lastWriteTime="21-Jan-15 12:37:30 AM" />
   <file source="D:\VTCA\MD04\Windows Phone\Lab\Windows Phone App\WP.TiTanCam\Assets\ApplicationIcon.png" archivePath="Assets\ApplicationIcon.png" lastWriteTime="20-Jan-15 11:52:43 PM" />
   <file source="D:\VTCA\MD04\Windows Phone\Lab\Windows Phone App\WP.TiTanCam\Assets\Tiles\FlipCycleTileMedium.png" archivePath="Assets\Tiles\FlipCycleTileMedium.png" lastWriteTime="20-Jan-15 11:52:43 PM" />
+  <file source="D:\VTCA\MD04\Windows Phone\Lab\Windows Phone App\CustomControl\Assets\AlignmentGrid.png" archivePath="Assets\AlignmentGrid.png" lastWriteTime="20-Dec-14 8:27:14 PM" />
+  <file source="D:\VTCA\MD04\Windows Phone\Lab\Windows Phone App\CustomControl\Resources\Hinh_2.jpg" archivePath="Resources\Hinh_2.jpg" lastWriteTime="23-Dec-14 9:08:51 PM" />
   <file source="D:\VTCA\MD04\Windows Phone\Lab\Windows Phone App\WP.TiTanCam\Bin\ARM\Debug\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="23-Jan-15 7:37:35 PM" />
 </xapCache>
